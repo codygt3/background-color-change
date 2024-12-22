@@ -44,11 +44,13 @@ Open your code editor and create a file named `index.html`. Add the following co
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Website</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Change Background Color</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  Hello World!
+  Click the Button to Change the Background!
+  <button id="colorButton">Change Color</button>
+
   <script src="script.js"></script>
 </body>
 </html>
@@ -60,12 +62,40 @@ Create a file named `styles.css` and add the following code to style your webpag
 ```css
 body {
   font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 ```
 
 ### 3. Create the JavaScript File
 
-Create a file named `script.js` 
+Create a file named `script.js` and add the following code:
+```js
+const button = document.getElementById('colorButton');
+const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+
+button.addEventListener('click', () => {
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundColor = randomColor;
+});
+```
+
 
 ### 4. Link the CSS and JavaScript Files
 
@@ -97,11 +127,13 @@ The full code should now look like this:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Website</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Change Background Color</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1> Hello World! </h1>
+  <h1>Click the Button to Change the Background!</h1>
+  <button id="colorButton">Change Color</button>
+
   <script src="script.js"></script>
 </body>
 </html>
@@ -110,6 +142,6 @@ The full code should now look like this:
 
 ## Conclusion
 
-Congratulations! You've created a simple website using HTML, CSS, and JavaScript. This is just the beginning – there are many more features and technologies to explore. Keep learning and experimenting to build more complex and dynamic websites.
+Congratulations! You've created a simple website that changes the background color using HTML, CSS, and JavaScript. This is just the beginning – there are many more features and technologies to explore. Keep learning and experimenting to build more complex and dynamic websites.
 
 Feel free to reach out if you have any questions or feedback. Happy coding!
