@@ -50,8 +50,6 @@ Open your code editor and create a file named `index.html`. Add the following co
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  Click the Button to Change the Background!
-  <button id="colorButton">Change Color</button>
 
   <script src="script.js"></script>
 </body>
